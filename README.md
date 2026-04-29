@@ -1,50 +1,96 @@
-# 🏡 Real Estate Analyzer: Undervalued Micro-Markets Detection
+# 🏡 Real Estate Analyzer  
+### 🔍 Undervalued Micro-Markets Detection System
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python">
-  <img src="https://img.shields.io/badge/Machine%20Learning-KMeans-orange?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Data%20Analysis-Pandas-green?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Python-3.12-blue?style=flat-square&logo=python">
+  <img src="https://img.shields.io/badge/ML-KMeans-orange?style=flat-square">
+  <img src="https://img.shields.io/badge/Data-Pandas-green?style=flat-square">
+  <img src="https://img.shields.io/badge/Status-Completed-success?style=flat-square">
 </p>
 
 ---
 
 ## 📌 Overview
-This project identifies **undervalued micro-markets** in real estate using **data analysis, statistical validation, and machine learning**.
+A data-driven real estate analytics system designed to identify **undervalued micro-markets** using **statistical analysis and machine learning**.
 
-By analyzing property listings, we detect locations where pricing is inefficient — helping uncover **hidden investment opportunities**.
+This project uncovers **hidden investment opportunities** by detecting locations where property prices are inefficient compared to similar listings.
+
+---
+
+## 🚀 Key Highlights
+- 📊 End-to-End **ETL Pipeline**
+- 📈 Insightful **Exploratory Data Analysis**
+- 📉 **Statistical Validation** using hypothesis testing
+- 🤖 **Machine Learning Clustering (K-Means)**
+- 📍 Location-based **Market Segmentation**
+- 💡 Actionable **Investment Insights**
+
+---
+
+## 📊 Dashboard Preview
+
+<p align="center">
+  <img src="assets/dashboard1.png" width="900">
+</p>
+<p align="center">
+  <img src="assets/dashboard2.png" width="900">
+</p>
+<p align="center">
+  <img src="assets/dashboard3.png" width="900">
+</p>
 
 ---
 
 ## 🎯 Problem Statement
-Develop a system to identify **undervalued locations** by analyzing real estate listings and detecting areas with lower **price per square foot** compared to similar properties.
+Identify **undervalued real estate locations** by analyzing property listings and comparing **price per square foot** across similar properties.
 
 ---
 
-## 🚀 Features
-- 📊 Data Extraction & Cleaning (ETL Pipeline)
-- 📈 Exploratory Data Analysis (EDA)
-- 📉 Statistical Testing (Hypothesis Testing)
-- 🤖 Machine Learning (K-Means Clustering)
-- 📍 Location-Based Market Segmentation
-- 💡 Undervalued Market Detection
+## 🧠 Methodology
+
+### 1️⃣ Data Pipeline
+- Extracted raw listings data  
+- Cleaned missing & inconsistent values  
+- Standardized formats for analysis  
+
+### 2️⃣ Feature Engineering
+- Created key metric:  
+  **Price per Sq Ft = Price / Area**
+
+### 3️⃣ Exploratory Analysis
+- Price distribution (right-skewed)  
+- Correlation analysis (area vs price)  
+- Location-based price variation  
+
+### 4️⃣ Statistical Testing
+- **Test Used**: Independent Sample T-Test  
+- **Insight**: Premium properties are significantly more expensive *(p < 0.05)*  
+
+### 5️⃣ Machine Learning
+- Applied **K-Means Clustering**  
+- Segmented properties into **4 micro-markets**  
+- Identified clusters with **lowest price per sq ft**  
 
 ---
 
-## 🧠 Core Concept
-
-### 💰 Price per Sq Ft (Key KPI)
-Used to normalize pricing across properties of different sizes, allowing for fair comparison.
+## 💡 Key Insights
+- 📉 Certain locations are **systematically undervalued**  
+- 📍 Strong **geographical price segmentation**  
+- 🏢 Premium listings dominate higher price bands  
+- 📊 Data-driven approach improves investment decisions  
 
 ---
 
 ## 🛠️ Tech Stack
-- Python
-- Pandas, NumPy
-- Matplotlib, Seaborn
-- Scikit-learn
-- Jupyter Notebook
-- Tableau
+
+| Category          | Tools Used |
+|------------------|----------|
+| Language         | Python |
+| Data Analysis    | Pandas, NumPy |
+| Visualization    | Matplotlib, Seaborn |
+| Machine Learning | Scikit-learn |
+| Dashboard        | Tableau |
+| Environment      | Jupyter Notebook |
 
 ---
 
@@ -52,17 +98,18 @@ Used to normalize pricing across properties of different sizes, allowing for fai
 ```
 📦 Egypt-RealEstateAnalyzer/
 ├── notebooks/
-│   ├── 01_extraction.ipynb         # Data Extraction
-│   ├── 02_cleaning.ipynb           # Data Cleaning & Preprocessing
-│   ├── 03_eda.ipynb                # Exploratory Data Analysis
+│   ├── 01_extraction.ipynb           # Data Extraction
+│   ├── 02_cleaning.ipynb             # Data Cleaning & Preprocessing
+│   ├── 03_eda.ipynb                  # Exploratory Data Analysis
 │   ├── 04_statistical_analysis.ipynb # Hypothesis Testing
-│   └── 05_final_load_prep.ipynb    # Feature Engineering + ML Clustering
+│   └── 05_final_load_prep.ipynb      # Feature Engineering + ML Clustering
 ├── data/
-│   ├── listings.csv
-│   └── past_rates.csv
+│   ├── raw/propertyfinder.csv        # raw data from propertyfinder
+│   └── processed/cleaned_data.csv    # cleaned data from propertyfinder
+├── docs/
+│   └── data_dictionary.md            # data dictionary
 ├── reports/
-│   ├── project_report.pdf
-│   └── analysis_report.md
+│   └── project_report.pdf              # project report
 └── README.md
 ```
 
@@ -116,18 +163,16 @@ Used to segment properties into distinct **micro-markets** based on features lik
 
 ## 👨‍💻 Author
 **Vivek Kumar Raj**
-
----
-
-## ⭐ If you like this project
-Feel free to give it a star ⭐
-
+**Rahul Dwivedi**
+**Anshvardhan**
+**Ansh Sharma**
+**Prateek Agade**
 
 ---
 
 ### 🔗 Useful Links
 - [GitHub Repository](https://github.com/viveeeeek13/SectionE_G-5_Egypt-RealEstateAnalyzer)
-- [Tableau Public Dashboard](link-to-dashboard-here)
+- [Tableau Public Dashboard](https://public.tableau.com/app/profile/rahul.dwivedi6526/viz/DVACapstoneDashboard/Dashboard1?publish=yes)
 
 ---
 
